@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <link href='http//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/> -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- jQuery -->
+    <!--start slider-->
+    <link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="js/jquery.easing.1.3.js"></script>
+    <script type='text/javascript' src="js/camera.min.js"></script>
+    <script type='text/javascript' src="js/wow.min.js"></script>
+    <script>
+        jQuery(function() {
+            jQuery('#camera_wrap_2').camera({
+
+                loader: 'bar',
+                pagination: false,
+                thumbnails: true
+            });
+        });
+        var wow = new WOW({　　　　
+            boxClass: 'wow',
+            　　　　animateClass: 'animated',
+            　　　　offset: 0,
+            　　　　mobile: true,
+            　　　　live: true　　
+        });　　
+        wow.init();
+    </script>
+    <!--end slider-->
+    <!--start gallery-->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            var filterList = {
+
+                init: function() {
+
+                    // MixItUp plugin
+                    // http//mixitup.io
+                    $('#gallerylist').mixitup({
+                        targetSelector: '.portfolio',
+                        filterSelector: '.filter',
+                        effects: ['fade'],
+                        easing: 'snap',
+                        // call the hover effect
+                        onMixEnd: filterList.hoverEffect()
+                    });
+
+                },
+
+                hoverEffect: function() {
+
+                    // Simple parallax effect
+                    $('#gallerylist .portfolio').hover(
+                        function() {
+                            $(this).find('.label').stop().animate({
+                                bottom: 0
+                            }, 200, 'easeOutQuad');
+                            $(this).find('img').stop().animate({
+                                top: -30
+                            }, 500, 'easeOutQuad');
+                        },
+                        function() {
+                            $(this).find('.label').stop().animate({
+                                bottom: -40
+                            }, 200, 'easeInQuad');
+                            $(this).find('img').stop().animate({
+                                top: 0
+                            }, 300, 'easeOutQuad');
+                        }
+                    );
+
+                }
+
+            };
+
+            // Run the show!
+            filterList.init();
+
+
+        });
+    </script>
+    <!--Add fancyBox main JS and CSS files-->
+    <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <!--star-wrap-->
+    <div class="wrap">
+        <!--header-->
+        <div class="header">
+            <!--start-logo-->
+            <div class="logo">
+                <a href="index.html">
+                    <h1>瑞赛可<span>Explain</span></h1>
+                </a>
+            </div>
+            <!--end-logo-->
+            <!--start-menu-->
+            <div class="menu">
+                <a class="toggleMenu" href="index.html"><img src="images/nav.png" alt=" " /></a>
+                <ul class="nav">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="about.html">环保监管</a></li>
+                    <li><a href="blog.html">环保产品</a></li>
+                    <!-- <li><a href="portfolio.html">环保产品</a></li> -->
+                    <li><a href="contact.html">关于我们</a></li>
+                    <div class="clear"> </div>
+                </ul>
+                <script type="text/javascript" src="js/responsive-nav.js"></script>
+            </div>
+            <div class="clear"> </div>
+            <!--end-menu-->
+        </div>
+    </div>
+    <!--end-header-->
+    <!--end wrap-->
+
+    <!-- start slider -->
+    <div class="main-con">
+        <div class="slider">
+            <div class="color"> <span> </span></div>
+            <div class="wrap">
+                <div class="fluid_container wow fadeIn" data-wow-offset="0" data-wow-delay="0.2s">
+                    <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+                        <div data-thumb="images/them1.jpg" data-src="images/slider1.jpg">
+                        </div>
+                        <div data-thumb="images/them2.jpg" data-src="images/slider2.jpg">
+                        </div>
+                        <div data-thumb="images/them3.jpg" data-src="images/slider3.jpg">
+                        </div>
+                        <div data-thumb="images/them4.jpg" data-src="images/slider4.jpg">
+                        </div>
+
+                    </div>
+                    <!-- #camera_wrap_2 -->
+                </div>
+                <!-- .fluid_container -->
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--end slider-->
+        <!--start home-page-con-->
+
+        <div class="home-page-con">
+            <div class="wrap">
+                <div class="top-grids">
+                    <div class="top-grid wow bounceInLeft" data-wow-offset="10" data-wow-delay="0.2s">
+                        <div class="top-grid-info">
+                            <img src="images/por.png" style="margin-top: 4px;" alt=" " />
+                            <h1>环保咨询</h1>
+                            <h2>Environmental</h2>
+                            <h2>Information</h2>
+                            <div class="clear"> </div>
+                        </div>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;瑞赛可Explain将会实时收录各省市、地区最新垃圾分类回收政策条例，为您提供第一手资讯。在这里，各类垃圾分类标准应俱全。图解注释全面细致。垃圾分类有疑问，上瑞赛可，一搜便知。</p>
+                        <a class="btn" href="index.html">更多</a>
+                    </div>
+                    <div class="top-grid wow bounceInUp" data-wow-offset="10" data-wow-delay="0.2s">
+                        <div class="top-grid-info">
+                            <img src="images/wrok.png" alt=" " />
+                            <h1>环保监管</h1>
+                            <h2>Environmental</h2>
+                            <h2>Regulation</h2>
+                            <div class="clear"> </div>
+                        </div>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;你想知道一个小小的易拉罐会有怎样的命运吗?瑞赛可的实时追踪功能可以让您跟着环保分拣员的脚步看看这些充满潜力的可回收物如何焕发新生，或是有效监督他们是否将令你深恶痛绝的有害垃圾就行科学的处理。</p>
+                        <a class="btn" href="index.html">更多</a>
+                    </div>
+                    <div class="top-grid wow bounceInRight" data-wow-offset="10" data-wow-delay="0.2s">
+                        <div class="top-grid-info ">
+                            <img src="images/connect.png" alt=" " />
+                            <h1>环保产品</h1>
+                            <h2>Environmental</h2>
+                            <h2>Protection Product</h2>
+                            <div class="clear"> </div>
+                        </div>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;小小的垃圾却蕴藏着大大的财富。一切可回收物经过科学的手段处理，再加工，便能重新焕发生机。易腐垃圾通过化学手段能成为良好的肥料或是染料，从来没有零价值的垃圾，只是缺少发现价值的眼睛。</p>
+                        <a class="btn" href="index.html">更多</a>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+
+                <!-- <div class="heading">
+                    <h2>分拣员信息</h2>
+                    <h6> </h6>
+                    <div class="clear"> </div>
+                </div>
+                <div class="main_btm">
+                    <div id="small-dialog1" class="mfp-hide">
+                        <div class="pop_up">
+                            <h2>character desing</h2>
+                            <img src="images/popup.jpg" alt=" " />
+                            <p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div class="clear"> </div>
+                        <div class="container">
+                            <div id="gallerylist">
+                                <div class="gallerylist-wrapper wow  bounceInLeft" data-wow-offset="0" data-wow-delay="0.2s">
+                                    <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                        <img src="images/image1.jpg" alt="Image 1" />
+                                        <span><img src="images/plus.png" alt=" "/> </span>
+                                        <div class="desc">
+                                            <h3>分拣员日常工作</h3>
+                                            <h2>character desing</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="gallerylist-wrapper wow  bounceInLeft" data-wow-offset="0" data-wow-delay="0.2s">
+                                    <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                        <img src="images/image2.jpg" alt="Image 2" />
+                                        <span><img src="images/plus.png" alt=" "/> </span>
+                                        <div class="desc">
+                                            <h3>分拣员招聘信息</h3>
+                                            <h2>brochure desing</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="gallerylist-wrapper wow  bounceInRight" data-wow-offset="0" data-wow-delay="0.2s">
+                                    <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                        <img src="images/image3.jpg" alt="Image 3" />
+                                        <span><img src="images/plus.png" alt=" "/> </span>
+                                        <div class="desc">
+                                            <h3>分拣碎碎念</h3>
+                                            <h2>social media buttons</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="gallerylist-wrapper wow  bounceInRight" data-wow-offset="0" data-wow-delay="0.2s">
+                                    <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                        <img src="images/image4.jpg" alt="Image 4" />
+                                        <span><img src="images/plus.png" alt=" "/> </span>
+                                        <div class="desc">
+                                            <h3>分拣能力</h3>
+                                            <h2>10 amazing websites</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="js/fliplightbox.min.js"></script>
+                    <script type="text/javascript">
+                        $('body').flipLightBox()
+                    </script>
+                    <div class="clear"> </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-main wrap">
+                <div class="footer-grids">
+                    <div class="fgrid">
+                        <h3>关于我们的内容</h3>
+                        <p>如果您对本网站的内容有任何的疑问，或者您发现本网站提供的信息有任何错误，欢迎您来电提问或指正。</p>
+                        <p>合作意向请致电000 00 00或E mail 0XX00XXXqqcom</p>
+
+                    </div>
+                    <div class="fgrid">
+                        <h3>更多官方信息渠道</h3>
+                        <p>关注微信公众号“瑞賽可Explain" ，-键获取最新环保资讯及环保产品推送。</p>
+                        <p>关注官方微博一“瑞赛可Explain" ,同步推送网站动态，并实时解答用户提问。</p>
+                    </div>
+                    <div class="fgrid">
+                        <h3>联系我们</h3>
+                        <p>合作意向请致电000 00 00或E mail 0XX00XXXqqcom</p>
+                        <div class="social-media">
+                            <ul>
+                                <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+                                <li><span class="simptip-position-bottom simptip-movable" data-tooltip="twitter"><a href="#" target="_blank"> </a> </span></li>
+                                <li><span class="simptip-position-bottom simptip-movable" data-tooltip="email"><a href="#" target="_blank"> </a></span></li>
+                                <li><span class="simptip-position-bottom simptip-movable" data-tooltip="rss"><a href="#" target="_blank"> </a></span></li>
+                                <li><span class="simptip-position-bottom simptip-movable" data-tooltip="vimeo"><a href="#" target="_blank"> </a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="wrap">
+                <div class="copy-right-left">
+                    <p>Copyright &copy; <a href="index.html">瑞賽可Explain</a> All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

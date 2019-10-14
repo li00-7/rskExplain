@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>about </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <link href='http//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/> -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- jQuery -->
+    <!--start slider-->
+    <link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="js/jquery.easing.1.3.js"></script>
+    <script type='text/javascript' src="js/camera.min.js"></script>
+    <script type='text/javascript' src="js/wow.min.js"></script>
+    <script>
+        jQuery(function() {
+            jQuery('#camera_wrap_2').camera({
+
+                loader: 'bar',
+                pagination: false,
+                thumbnails: true
+            });
+        });
+        var wow = new WOW({　　　　
+            boxClass: 'wow',
+            　　　　animateClass: 'animated',
+            　　　　offset: 0,
+            　　　　mobile: true,
+            　　　　live: true　　
+        });　　
+        wow.init();
+    </script>
+    <!--end slider-->
+    <!--start gallery-->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            var filterList = {
+
+                init: function() {
+                    $('#gallerylist').mixitup({
+                        targetSelector: '.portfolio',
+                        filterSelector: '.filter',
+                        effects: ['fade'],
+                        easing: 'snap',
+                        onMixEnd: filterList.hoverEffect()
+                    });
+
+                },
+                hoverEffect: function() {
+                    $('#gallerylist .portfolio').hover(
+                        function() {
+                            $(this).find('.label').stop().animate({
+                                bottom: 0
+                            }, 200, 'easeOutQuad');
+                            $(this).find('img').stop().animate({
+                                top: -30
+                            }, 500, 'easeOutQuad');
+                        },
+                        function() {
+                            $(this).find('.label').stop().animate({
+                                bottom: -40
+                            }, 200, 'easeInQuad');
+                            $(this).find('img').stop().animate({
+                                top: 0
+                            }, 300, 'easeOutQuad');
+                        }
+                    );
+                }
+            };
+            filterList.init();
+        });
+    </script>
+    <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>瑞赛可<span> Explain</span></h1>
+                </a>
+            </div>
+            <div class="menu">
+                <a class="toggleMenu" href="index.html"><img src="images/nav.png" alt=" " /></a>
+                <ul class="nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="active"><a href="about.html">环保监管</a></li>
+                    <li><a href="blog.html">环保产品</a></li>
+                    <li><a href="contact.html">关于我们</a></li>
+                    <div class="clear"> </div>
+                </ul>
+                <script type="text/javascript" src="js/responsive-nav.js"></script>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="top-heading">
+        <div class="wrap">
+            <h1>环保监管</h1>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content">
+            <div class="main-grid">
+                <div class="grid-left">
+                    <div class="main_btm" style="margin-top: 30px;">
+                        <img src="images/lookBg.jpg" alt=" " />
+                    </div>
+
+                    <div class="heading">
+                        <h2>分拣员信息</h2>
+                        <h6> </h6>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="main_btm">
+                        <div id="small-dialog1" class="mfp-hide">
+                            <div class="pop_up">
+                                <img src="images/image1.jpg" alt=" " />
+                                <p class="para">分拣员日常工作 分拣员的十二时辰 日出 每天早晨，当大家开始新的一天时，分拣员迎来的是居民昨日的垃圾。美好的工作从垃圾开始！在清晨，他们需要协助居民将垃圾进行精准的分类，时间紧，任务重。<br> 食时 准备转运垃圾的分类垃圾车开了过来，分拣员需要二次确认不同种类的垃圾，并将大家分类好的垃圾投放到不同的垃圾车中<br> 哺时 开始为小区的居民普及垃圾分类知识，想尽各种法子，让街坊邻里熟练垃圾分类。<br> 日入 下午迎接第二次垃圾收集分拣的高峰<br>                                    黄昏 随着太阳渐渐落下，转运不同种类的垃圾车慢慢吞没在夕阳下，分拣员的一天结束了。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="small-dialog2" class="mfp-hide">
+                            <div class="pop_up">
+                                <img src="images/image2.jpg" alt=" " />
+                                <p class="para">分拣员招聘信息<br> 作为垃圾分类的第一道岗 ——分拣员，身肩重大使命，我们需要你的加入<br> 1.有一颗环保的心，热心环保事业，愿意建设美丽生态家园。
+                                    <br> 2.基本的垃圾分类常识。
+                                    <br> 3.主动热情，善于与人沟通。
+                                    <br> 其实分拣员不需要太高的学历和经验，只要你有一颗为环境改善而努力的心，我们一起学习，共同奋斗。
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="small-dialog3" class="mfp-hide">
+                            <div class="pop_up">
+                                <img src="images/image3.jpg" alt=" " />
+                                <p class="para">分拣碎碎念<br> 干湿要分开，能卖拿去卖，有害单独放。 绿厨厨，黄其其，红危危，蓝宝宝。 <br> 可回收，丢蓝色，有害垃圾丢红色。 厨余垃圾是绿色，其它垃圾用灰色。 <br> 垃圾多 ，危害大，分类摆放人人夸。 餐厨垃圾单独放，有害垃圾，别乱抛。 <br> 乱丢垃圾危害大，干干净净利大家。
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="small-dialog4" class="mfp-hide">
+                            <div class="pop_up">
+                                <img src="images/image4.jpg" alt=" " />
+                                <p class="para">分拣员人员能力参差不齐
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gallery">
+                            <div class="clear"> </div>
+                            <div class="container">
+                                <div id="gallerylist">
+                                    <div class="gallerylist-wrapper wow  bounceInLeft" data-wow-offset="0" data-wow-delay="0.2s">
+                                        <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                            <img src="images/image1.jpg" alt="Image 1" />
+                                            <span><img src="images/plus.png" alt=" "/> </span>
+                                            <div class="desc">
+                                                <h3>分拣员日常工作</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="gallerylist-wrapper wow  bounceInLeft" data-wow-offset="0" data-wow-delay="0.2s">
+                                        <a class="popup-with-zoom-anim" href="#small-dialog2">
+                                            <img src="images/image2.jpg" alt="Image 2" />
+                                            <span><img src="images/plus.png" alt=" "/> </span>
+                                            <div class="desc">
+                                                <h3>分拣员招聘信息</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="gallerylist-wrapper wow  bounceInRight" data-wow-offset="0" data-wow-delay="0.2s">
+                                        <a class="popup-with-zoom-anim" href="#small-dialog3">
+                                            <img src="images/image3.jpg" alt="Image 3" />
+                                            <span><img src="images/plus.png" alt=" "/> </span>
+                                            <div class="desc">
+                                                <h3>分拣碎碎念</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="gallerylist-wrapper wow  bounceInRight" data-wow-offset="0" data-wow-delay="0.2s">
+                                        <a class="popup-with-zoom-anim" href="#small-dialog4">
+                                            <img src="images/image4.jpg" alt="Image 4" />
+                                            <span><img src="images/plus.png" alt=" "/> </span>
+                                            <div class="desc">
+                                                <h3>分拣能力</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+
+                    <div class="heading">
+                        <h2>垃圾车实时定位</h2>
+                        <h6> </h6>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="main_btm">
+                        <div class="sinfo">
+                            <div class="sinfo-left">
+                                <img src="images/trashCar.jpg" class="wow fadeIn" alt=" " data-wow-offset="0" data-wow-delay="0.2s" />
+                            </div>
+                            <div class="sinfo-right wow bounceInRight" data-wow-offset="0" data-wow-delay="0.2s">
+                                <h1>路线规划：统一调度，现代化管理水平，降低企业运行成本，提高工作效率<br><br> 轨迹回放;可保存三个月的行驶轨迹，导出EXCEL表，为以后分析路线作为管理提供依据，合理有效的管理车辆和监督司机的工作态度和行为
+                                    <br><br> 实时监控：监控车辆的速度，路面打扫的清洁程度，了解车辆分布情况
+                                    <br><br> 超速报警提醒：避免超速驾驶，减少违章，节约车辆开支
+                                    <br><br> 疲劳驾驶：在平台上设置不能工作超过4个小时，4个小时就会报警提醒司机该休息或者换司机继续开车，保证了司机和车辆的安全
+                                    <br><br> 灵活调度：达到垃圾一天做到清理，让整个城市垃圾无处藏身
+                                </h1>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                    </div>
+                    <div class="heading">
+                        <h2>分类回收流程</h2>
+                        <h6> </h6>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="main_btm">
+                        <img src="images/rescly.jpg" class="wow fadeInRight" alt="分类回收再利用流程" data-wow-offset="0" data-wow-delay="0.2s" />
+                    </div>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="grid-left-img">
+					<i>
+					<img src="images/aimg1.jpg" alt= " " />
+					</i>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div class="clear"> </div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				<p><span>L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p> 
+				<span>
+					<h6> </h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p> 
+					<div class="clear"> </div>
+				</span>
+				<div class="two-grids">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+						<div class="clear"> </div>
+				</div>
+				<div class="three-grids">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<div class="clear"> </div>
+				</div> -->
+                </div>
+                <div class="contact-right">
+                    <div class="side-bar">
+                        <div class="grid-right-headings">
+                            <h2><a href="#">关于瑞赛可</a></h2>
+                            <h6> </h6>
+                            <div class="clear"> </div>
+                        </div>
+                        <p style="padding:0px;">瑞赛可Explain是一家垃圾分类主题的网站， 致力于帮助民众了解垃圾分类回收的政策咨询和具体实施办法。网站还收录有各类新兴环保产品以及可回收物再生产品。
+                        </p>
+                        <div class="grid-right-headings">
+                            <h2><a href="#">分类</a></h2>
+                            <h6> </h6>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="seach-links">
+                            <p><a href="#"> 环保政策</a></p>
+                            <p><a href="#"> 环保咨询</a></p>
+                            <p><a href="#"> 环保教育</a></p>
+                            <p><a href="#"> 环保监管</a></p>
+                            <p><a href="#"> 环保产品</a></p>
+                            <p><a href="#"> 关于我们</a></p>
+                        </div>
+                        <div class="grid-right-headings">
+                            <h2><a href="#">了解更多</a></h2>
+                            <h6> </h6>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="gallery">
+                            <ul>
+                                <li><img src="images/gallery_1.gif" alt=" " /></li>
+                                <li><img src="images/gallery_2.gif" alt=" " /></li>
+                                <li><img src="images/gallery_3.gif" alt=" " /></li>
+                                <li><img src="images/gallery_4.gif" alt=" " /></li>
+                                <li><img src="images/gallery_5.gif" alt=" " /></li>
+                                <li><img src="images/gallery_6.gif" alt=" " /></li>
+                                <div class="clear"> </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--end grid-right-->
+                <div class="clear"> </div>
+            </div>
+            <!--end about-grids-->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-main wrap">
+            <div class="footer-grids">
+                <div class="fgrid">
+                    <h3>关于我们的内容</h3>
+                    <p>如果您对本网站的内容有任何的疑问，或者您发现本网站提供的信息有任何错误，欢迎您来电提问或指正。</p>
+                    <p>合作意向请致电000 00 00或E mail 0XX00XXXqqcom</p>
+
+                </div>
+                <div class="fgrid">
+                    <h3>更多官方信息渠道</h3>
+                    <p>关注微信公众号“瑞賽可Explain" ，-键获取最新环保资讯及环保产品推送。</p>
+                    <p>关注官方微博一“瑞赛可Explain" ,同步推送网站动态，并实时解答用户提问。</p>
+                </div>
+                <div class="fgrid">
+                    <h3>联系我们</h3>
+                    <p>合作意向请致电000 00 00或E mail 0XX00XXXqqcom</p>
+                    <div class="social-media">
+                        <ul>
+                            <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+                            <li><span class="simptip-position-bottom simptip-movable" data-tooltip="twitter"><a href="#" target="_blank"> </a> </span></li>
+                            <li><span class="simptip-position-bottom simptip-movable" data-tooltip="email"><a href="#" target="_blank"> </a></span></li>
+                            <li><span class="simptip-position-bottom simptip-movable" data-tooltip="rss"><a href="#" target="_blank"> </a></span></li>
+                            <li><span class="simptip-position-bottom simptip-movable" data-tooltip="vimeo"><a href="#" target="_blank"> </a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="wrap">
+            <div class="copy-right-left">
+                <p>Copyright &copy; <a href="index.html">瑞賽可Explain</a> All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/fliplightbox.min.js"></script>
+    <script type="text/javascript">
+        $('body').flipLightBox()
+    </script>
+</body>
+
+</html>
